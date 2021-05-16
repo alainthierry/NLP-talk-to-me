@@ -1,0 +1,85 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": ["","??"],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs don't have adverse reaction?" ],
+         "responses": ["An adverse drug reaction is a harmful reaction to a medicine given at the correct dose.The reaction can start soon after you take the medicine, or up to 2 weeks after you stop.", "All drugs can cause adverse behavior. Though some of them can be less harmful. This depends on the patient organism.", "If your adverse drug reaction persist, please consult your doctor", "Your healthcare provider will ask about your medical history and allergies. You may need additional testing if you developed anaphylaxis after you were exposed to a trigger and then exercised"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
+         "responses": ["Navigating to Blood Pressure module"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
+         "responses": ["Please provide Patient ID", "Patient ID?"],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": [],
+         "responses": ["Loading Blood pressure result for Patient"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+         "responses": ["Please provide pharmacy name"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+         "patterns": ["MOWRY MEDICAL PHARMACY" , "MOWRY PLAZA PHARMACY","KAISER","WALGREENS","FARMACIA REMEDIOS","CVS","WILLOW CREEK PHARMACY","TRINITY","VALLEY HEALTH CENTER","OMNICARE","SAFEWAY","COMMUNITY PHARMACY","COSTCO","RITE AID","WAL-MART ","TARGET"],
+         "responses": ["1999 MOWRY AVENUE","668 MOWRY AVENUE","395 HICKEY BOULEVARD","300 UNIVERSITY AVENUE","3351 INTERNATIONAL BOULEVARD","124 BELLE MILL ROAD","39050 HIGHWAY 299","60 EASTER AVENUE","660 SOUTH FAIR OAKS AVENUE","5200 CHURN CREEK ROAD","5431 CLAYTON ROAD","2500 NORTHEAST NEFF ROAD","2500 NORTHEAST HIGHWAY 20","2310 HOMESTEAD ROAD","5821 ANTELOPE ROAD","5837 SUNRISE BOULEVARD"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+         "responses": ["Please provide hospital name or location"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": [],
+         "responses": ["Please provide hospital type"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": [],
+         "responses": ["Loading hospital details"],
+         "context": [""]
+        },
+        {"tag": "about",
+         "patterns": ["Who are you?", "What are you?", "Who you are?" ],
+         "responses": ["I.m Talk-To-Me, your bot assistant", "I'm Talk-To-Me, an Artificial Intelligent bot"]
+        },
+        {"tag": "name",
+        "patterns": ["what is your name", "what should I call you", "whats your name?"],
+        "responses": ["You can call me Talk-To-Me.", "I'm Talk-To-Me!", "Just call me as Talk-To-Me"]
+        },
+        {"tag": "help",
+        "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please"],
+        "responses": ["Tell me how can assist you", "Tell me your problem to assist you", "Yes Sure, How can I support you"]
+        }
+   ]
+}
