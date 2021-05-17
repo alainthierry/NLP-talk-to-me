@@ -72,9 +72,20 @@ def getResponse(ints, intents_json):
 
     return result
 
+def chatting():
+    print("Welcome to Talk-To-Me (Write 'quit' to leave the program):")
+    
+    while(True):
+        message = input()
+        if message == 'quit':
+            break
+        elif message != '':
+            ints = predict_class(message)
+            result = getResponse(ints, intents)
+            print(result)
 
 #Creating tkinter GUI
-
+"""
 import tkinter
  
 from tkinter import *
@@ -149,4 +160,7 @@ EntryBox.place(x=128, y=401, height=90, width=265)
 SendButton.place(x=6, y=401, height=90)
 # 108
 # 109
-root.mainloop()
+root.mainloop()"""
+
+if __name__ == '__main__':
+    chatting()
